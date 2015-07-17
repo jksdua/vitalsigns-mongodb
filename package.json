@@ -1,0 +1,30 @@
+{
+  "name": "vitalsigns-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB monitor for vitalsigns",
+  "main": "monitor.js",
+  "scripts": {
+    "test": "mocha --bail --reporter spec test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jksdua/vitalsigns-mongodb.git"
+  },
+  "keywords": [
+    "vitalsigns",
+    "monitor"
+  ],
+  "author": "Jaap Karan Singh <jksdua@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jksdua/vitalsigns-mongodb/issues"
+  },
+  "homepage": "https://github.com/jksdua/vitalsigns-mongodb#readme",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "mongodb": "^2.0.39",
+    "monk": "^1.0.1",
+    "vitalsigns": "^0.4.3"
+  }
+}
