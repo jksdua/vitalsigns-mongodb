@@ -44,7 +44,7 @@ module.exports = function(options) {
 					dbStats = stats;
 					// unknown upstream error
 					if (!stats.ok) {
-						dbStats.err = new Error('unknown upstream error');
+						dbStats.err = 'unknown upstream error';
 					}
 				}
 
@@ -57,7 +57,7 @@ module.exports = function(options) {
 				// this is handy if the network goes down
 			setTimeout(function() {
 				if (!done) {
-					dbStats = { ok: 0, err: new Error('timeout error') };
+					dbStats = { ok: 0, err: 'timeout error' };
 				}
 			}, (options.freq || DEFAULT_SAMPLE_FREQ) * 5);
 		}, options.freq || DEFAULT_SAMPLE_FREQ);
