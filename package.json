@@ -1,6 +1,6 @@
 {
   "name": "vitalsigns-mongodb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MongoDB monitor for vitalsigns",
   "main": "monitor.js",
   "scripts": {

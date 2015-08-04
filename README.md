@@ -96,7 +96,7 @@ Multiple databases
 		},
 		'secret_db': {
 			ok: 0,
-			err: [Error: failed to connect to [localhost:27016]]
+			err: { errmsg: '[Error: failed to connect to [localhost:27016]]' }
 		},
 		healthy: true
 	}

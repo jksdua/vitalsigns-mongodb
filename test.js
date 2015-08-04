@@ -69,7 +69,7 @@ describe('#vitalsigns-mongodb', function() {
 
 		setTimeout(function() {
 			expect(vitals.getReport()).to.have.deep.property('vitalsigns-mongodb.ok', 0);
-			expect(vitals.getReport()).to.have.deep.property('vitalsigns-mongodb.err').match(/timeout/i);
+			expect(vitals.getReport()).to.have.deep.property('vitalsigns-mongodb.err.errmsg').match(/timeout/i);
  			vitals.destroy();
 			done();
 		}, 500);

@@ -44,7 +44,7 @@ module.exports = function(options) {
 					dbStats = stats;
 					// unknown upstream error
 					if (!stats.ok) {
-						dbStats.err = 'unknown upstream error';
+						dbStats.err = { ok: 0, name: 'VitalsignsMongodbError', errmsg: 'unknown upstream error' };
 					}
 				}
 
@@ -57,7 +57,7 @@ module.exports = function(options) {
 				// this is handy if the network goes down
 			setTimeout(function() {
 				if (!done) {
-					dbStats = { ok: 0, err: 'timeout error' };
+					dbStats = { ok: 0, err: { ok: 0, name: 'VitalsignsMongodbError', errmsg: 'timeout error' } };
 				}
 			}, (options.freq || DEFAULT_SAMPLE_FREQ) * 5);
 		}, options.freq || DEFAULT_SAMPLE_FREQ);
